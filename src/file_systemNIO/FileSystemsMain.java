@@ -30,7 +30,21 @@ public class FileSystemsMain {
             //MOVING EXISTING FILES
             Path fileToMove = FileSystems.getDefault().getPath("Examples\\file1copy.txt");
             Path destination = FileSystems.getDefault().getPath("Examples\\dir1\\", "file1copy.txt");
-            Files.move(fileToMove, destination);
+            if(!Files.exists(fileToMove)){
+                Files.move(fileToMove, destination);
+            }
+
+            //MOVING EXISTING FILES AND RENAMING THEM
+            destination = FileSystems.getDefault().getPath("Examples\\dir1\\file1copy2.txt");
+            if(!Files.exists(destination)){
+                Files.move(fileToMove, destination);
+            }
+
+            //DELETING
+            Path fileToDelete = FileSystems.getDefault().getPath("Examples\\dir1\\file1copy2.txt");
+            if(Files.exists(fileToDelete)){
+                Files.delete(fileToDelete);
+            }
 
         }catch(IOException e){
             e.printStackTrace();

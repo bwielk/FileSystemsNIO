@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7446e3a4-bebe-4b34-b081-74b24f77551d" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/Examples/file1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Examples/file1.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Examples/file1copy.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Examples/file1copy.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/file_systemNIO/FileSystemsMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/file_systemNIO/FileSystemsMain.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -19,8 +17,8 @@
       <file leaf-file-name="FileSystemsMain.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/file_systemNIO/FileSystemsMain.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="333">
-              <caret line="28" column="12" selection-start-line="28" selection-start-column="12" selection-end-line="28" selection-end-column="12" />
+            <state relative-caret-position="272">
+              <caret line="45" column="41" selection-start-line="45" selection-start-column="41" selection-end-line="45" selection-end-column="41" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -35,11 +33,6 @@
               <caret column="32" selection-start-column="32" selection-end-column="32" />
             </state>
           </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="file1copy.txt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Examples/file1copy.txt">
-          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file leaf-file-name="workingDirectoryFile.txt" pinned="false" current-in-tab="false">
@@ -106,6 +99,12 @@
               <item name="FileSystemNIO" type="b2602c69:ProjectViewProjectNode" />
               <item name="FileSystemNIO" type="462c0819:PsiDirectoryNode" />
               <item name="Examples" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="FileSystemNIO" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FileSystemNIO" type="462c0819:PsiDirectoryNode" />
+              <item name="Examples" type="462c0819:PsiDirectoryNode" />
+              <item name="dir1" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="FileSystemNIO" type="b2602c69:ProjectViewProjectNode" />
@@ -234,11 +233,11 @@
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
       <window_info anchor="right" id="Maven Projects" />
       <window_info anchor="bottom" id="Version Control" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32956383" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32956383" />
       <window_info anchor="bottom" id="Terminal" />
       <window_info id="Capture Tool" />
       <window_info id="Designer" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24962063" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24962063" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" />
@@ -304,8 +303,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/file_systemNIO/FileSystemsMain.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="333">
-          <caret line="28" column="12" selection-start-line="28" selection-start-column="12" selection-end-line="28" selection-end-column="12" />
+        <state relative-caret-position="272">
+          <caret line="45" column="41" selection-start-line="45" selection-start-column="41" selection-end-line="45" selection-end-column="41" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
