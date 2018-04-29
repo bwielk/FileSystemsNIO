@@ -5,6 +5,7 @@ import java.io.IOException;
 import java.nio.file.FileSystems;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import java.nio.file.Paths;
 
 public class FileSystemsMain {
 
@@ -15,6 +16,8 @@ public class FileSystemsMain {
         path = FileSystems.getDefault().getPath("Files","subdirectoryFile.txt");
         printFile(path);
         path = FileSystems.getDefault().getPath("..\\externalWorkingDirectory.txt");
+        printFile(path);
+        path = Paths.get("C:\\Users\\Blazej W\\IdeaProjects\\externalWorkingDirectory.txt");
         printFile(path);
     }
 
