@@ -9,12 +9,16 @@ import java.nio.file.Path;
 public class FileSystemsMain {
 
     public static void main(String[] args) {
-        Path path = FileSystems.getDefault().getPath("workingDirectoryFile.txt");
+        Path path;
+        path = FileSystems.getDefault().getPath("workingDirectoryFile.txt");
+        printFile(path);
+        path = FileSystems.getDefault().getPath("Files","subdirectoryFile.txt");
         printFile(path);
     }
 
     private static void printFile(Path path){
         try(BufferedReader fileReader = Files.newBufferedReader(path)){
+            System.out.println("\n\n//////////////////////////////////////////////");
             String line;
             while((line = fileReader.readLine()) != null){
                 System.out.println(line);
