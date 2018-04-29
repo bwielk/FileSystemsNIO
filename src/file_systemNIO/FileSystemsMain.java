@@ -4,23 +4,34 @@ import com.sun.xml.internal.ws.policy.privateutil.PolicyUtils;
 
 import java.io.BufferedReader;
 import java.io.IOException;
-import java.nio.file.FileSystems;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
+import java.nio.file.*;
 import java.sql.SQLOutput;
 
 public class FileSystemsMain {
 
     public static void main(String[] args) {
 
-        //COPYING EXISTING FILE
-
-        try{Path sourceFile = FileSystems.getDefault().getPath("Examples\\file1.txt");
+        try{
+            //COPYING EXISTING FILES
+            Path sourceFile = FileSystems.getDefault().getPath("Examples\\file1.txt");
             Path copyFile = FileSystems.getDefault().getPath("Examples\\file1copy.txt");
             if(!Files.exists(copyFile)){
                 Files.copy(sourceFile, copyFile);
+            }else{
+                Files.copy(sourceFile, copyFile, StandardCopyOption.REPLACE_EXISTING);
             }
+
+            sourceFile = FileSystems.getDefault().getPath("Examples\\dir1");
+            copyFile = FileSystems.getDefault().getPath("Examples\\dir1CopyWithoutContent");
+            if(!Files.exists(copyFile)){
+                Files.copy(sourceFile, copyFile);
+            }
+
+            //MOVING EXISTING FILES
+            Path fileToMove = FileSystems.getDefault().getPath("Examples\\file1copy.txt");
+            Path destination = FileSystems.getDefault().getPath("Examples\\dir1\\", "file1copy.txt");
+            Files.move(fileToMove, destination);
+
         }catch(IOException e){
             e.printStackTrace();
         }
