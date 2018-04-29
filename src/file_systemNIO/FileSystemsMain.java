@@ -14,6 +14,8 @@ public class FileSystemsMain {
         printFile(path);
         path = FileSystems.getDefault().getPath("Files","subdirectoryFile.txt");
         printFile(path);
+        path = FileSystems.getDefault().getPath("..\\externalWorkingDirectory.txt");
+        printFile(path);
     }
 
     private static void printFile(Path path){
