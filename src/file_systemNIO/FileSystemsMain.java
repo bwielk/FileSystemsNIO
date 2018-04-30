@@ -1,12 +1,9 @@
 package file_systemNIO;
 
-import com.sun.xml.internal.ws.policy.privateutil.PolicyUtils;
-
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.nio.file.*;
 import java.nio.file.attribute.BasicFileAttributes;
-import java.sql.SQLOutput;
 
 public class FileSystemsMain {
 
