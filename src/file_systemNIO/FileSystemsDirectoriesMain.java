@@ -54,7 +54,16 @@ public class FileSystemsDirectoriesMain {
         try{
             Files.walkFileTree(dir2Path, new PrintNames());
         }catch(IOException e){
-            e.getMessage();
+            System.out.println(e.getMessage());
+        }
+
+        //COPYING A DIRECTORY AND ITS CONTENT TO ANOTHER DIRECTORY
+        System.out.println("////////////////////////COPYING/////////////////////////");
+        Path copyPath = FileSystems.getDefault().getPath("Examples" + File.separator + "newDir4" + File.separator + "newDir2");
+        try{
+            Files.walkFileTree(dir2Path, new CopyFiles(dir2Path, copyPath));
+        }catch(IOException e){
+            System.out.println(e.getMessage());
         }
     }
 }
