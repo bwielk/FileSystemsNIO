@@ -27,12 +27,12 @@ public class CopyFiles extends SimpleFileVisitor<Path> {
     public FileVisitResult preVisitDirectory(Path dir, BasicFileAttributes attrs) throws IOException {
         Path relativisedPath = sourceRoot.relativize(dir);
         System.out.println("relativisedPath = " + relativisedPath);
-        Path copyDir = targetRoot.relativize(relativisedPath);
+        Path copyDir = targetRoot.resolve(relativisedPath);
         System.out.println("Path for copy = " + copyDir);
         try{
             Files.copy(dir, copyDir);
         }catch(IOException e){
-            e.getMessage();
+            System.out.println(e.getMessage());
             return FileVisitResult.SKIP_SUBTREE;
         }
         return FileVisitResult.CONTINUE;
@@ -42,12 +42,12 @@ public class CopyFiles extends SimpleFileVisitor<Path> {
     public FileVisitResult visitFile(Path file, BasicFileAttributes attrs) throws IOException {
         Path relativisedPath = sourceRoot.relativize(file);
         System.out.println("relativisedPath = " + relativisedPath);
-        Path copyDir = targetRoot.relativize(relativisedPath);
+        Path copyDir = targetRoot.resolve(relativisedPath);
         System.out.println("Path for copy = " + copyDir);
         try{
             Files.copy(file, copyDir);
         }catch(IOException e){
-            e.getMessage();
+            System.out.println(e.getMessage());
         }
         return FileVisitResult.CONTINUE;
     }
