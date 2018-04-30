@@ -3,6 +3,7 @@ package file_systemNIO;
 import java.io.File;
 import java.io.IOException;
 import java.nio.file.*;
+import java.sql.SQLOutput;
 
 public class FileSystemsDirectoriesMain {
 
@@ -65,5 +66,26 @@ public class FileSystemsDirectoriesMain {
         }catch(IOException e){
             System.out.println(e.getMessage());
         }
+
+        //JAVA NIO in JAVA IO
+        File file = new File("Examples\\file.txt");
+        System.out.println("converted path = " + file.toPath());
+
+        File parent = new File("C:\\Users\\Blazej W\\IdeaProjects\\FileSystemNIO\\Examples");
+        File resolvedFile = new File(parent, "\\dir1\\file1.txt");
+        System.out.println("converted path = " + resolvedFile.toPath() + " EXISTS? => " +  Files.exists(resolvedFile.toPath()));
+
+        File workingDirectory = new File("").getAbsoluteFile();
+        System.out.println("Absolute file/Working directory = " + workingDirectory + " EXISTS? => " + Files.exists(workingDirectory.toPath()));
+
+        System.out.println("///////////////////////DIR1 CONTENTS WITH IO///////////////////////////////////");
+        File dir1file = new File(workingDirectory, "Examples\\dir1");
+        System.out.println("dir1 = " + dir1file + " EXISTS? => " + Files.exists(dir1file.toPath()));
+        String[] dir1contents = dir1file.list();
+        for(int i = 0; i<dir1contents.length; i++){
+            System.out.println(dir1contents[i]);
+        }
+
+        
     }
 }
